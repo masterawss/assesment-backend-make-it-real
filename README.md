@@ -4,6 +4,10 @@ Para probar la api localmente, descargue el repositorio y luego ejecute:
 ```bash
 npm install
 ```
+Una vez instaladas las dependencias, puedes correr la api:
+```bash
+npm run start
+```
 Ten en cuenta que no hace falta realizar ninguna otra configuración. Al ser una api demostrativa y de fácil uso, se permitió subir las variables de entorno (Archivo .env) con las conexiones a la base de datos.
 
 ## Uso
