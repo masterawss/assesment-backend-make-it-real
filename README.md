@@ -12,7 +12,7 @@ Ten en cuenta que no hace falta realizar ninguna otra configuración. Al ser una
 
 ## Uso
 
-Importe el archivo api.json a postman. Todos los endpoints estarán declarados y los body tienen campos JSON para probar.
+Importe el archivo api.json a postman. Todos los endpoints estarán declarados y los body de cada enpoint ya tienen definido un JSON de pruebas que puedes modificar.
 
 Antes de usar el api, ejecute el endpoint Sign In, este le devolverá un token de sesión basado en JWT. Debe copiar el valor en las variables de la colección Assesment
 
