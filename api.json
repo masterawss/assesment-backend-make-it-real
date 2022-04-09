@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "a5813ed5-6d19-40f2-9757-c8261e974bad",
+		"name": "Assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"masterawss@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/auth/local/login",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"auth",
+						"local",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign Up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"masterawss@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/auth/local/sign-up",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"auth",
+						"local",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/auth/get-user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"auth",
+						"get-user"
+					],
+					"query": [
+						{
+							"key": "auth-token",
+							"value": "{{token}}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/favs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/favs",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"favs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/favs/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/api/favs/6251c34a2f3b7ba8eac843ee",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"favs",
+						"6251c34a2f3b7ba8eac843ee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/favs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lista prueba\",\r\n    \"items\": [\r\n        {\r\n            \"title\"       : \"Titulo 1\",\r\n            \"description\" : \"description 1\",\r\n            \"link\"        : \"https://www.google.com\"\r\n        },\r\n        {\r\n            \"title\"       : \"Titulo 2\",\r\n            \"description\" : \"description 2\",\r\n            \"link\"        : \"https://www.facebook.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/favs",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"favs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/favs/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "auth-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Lista 1\",\r\n    \"items\": [\r\n        {\r\n            \"title\"       : \"Titulo 1\",\r\n            \"description\" : \"description 1\",\r\n            \"link\"        : \"https://www.google.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/favs/6251c2aa045c6992254863a6",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"favs",
+						"6251c2aa045c6992254863a6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "http://localhost:4000",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibWFzdGVyYXdzc0BnbWFpbC5jb20iLCJpZCI6IjYyNTBlOTZiZGUzMzhiMzRkNDhmNTU0NCIsImlhdCI6MTY0OTUyNjEwM30.7JwKbKaaxl_kZdpvHFJaCKYQy56B7PwWAPRLKi1wIN8",
+			"type": "string"
+		}
+	]
+}
